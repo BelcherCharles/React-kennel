@@ -3,3 +3,11 @@
     justify-content: space-around;
     flex-direction: row;
 }
+
+.container-div {
+    margin-top: 10vh;
+}
+
+body {
+    background-image: url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwi9tZL8pvDgAhXBMd8KHWQpCtUQjRx6BAgBEAU&url=https%3A%2F%2Fpngtree.com%2Ffree-animals-png%2Fdog&psig=AOvVaw3817CLiNo_1V2RdNMPA8sO&ust=1552057247412169");
+}
