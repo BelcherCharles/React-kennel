@@ -1,30 +1,30 @@
 import React, { Component } from "react"
-import "./animal.css"
+import "./owners.css"
+import removeOwner from './removeOwner.png'
 // import dog from "./DogIcon.png"
 
 
-export default class AnimalDetail extends Component {
+export default class OwnerDetail extends Component {
     render() {
         /*
             Using the route parameter, find the animal that the
             user clicked on by looking at the `this.props.animals`
             collection that was passed down from ApplicationViews
         */
-        const animal = this.props.animals.find(a => a.id === parseInt(this.props.match.params.animalId)) || {}
-
+        const owner = this.props.owners.find(o => o.id === parseInt(this.props.match.params.ownerId)) || {}
+            console.log(owner)
         return (
-            <section className="animal">
-                <div key={animal.id} className="card">
+            <section className="owner">
+                <div key={owner.id} className="card">
                     <div className="card-body">
                         <h4 className="card-title">
-                        <img src={animal.species.image} className="icon--image" />
-                            {animal.name}
+                        <img src={removeOwner} className="icon--Owners" />
+                            {owner.name}</h4>
                             <br></br>
-                            {animal.species.name}</h4>
 
                         <a href="#"
-                            onClick={() => this.props.deleteAnimal(animal.id)
-                                            .then(() => this.props.history.push("/animals"))}
+                            onClick={() => this.props.removeOwner(owner.id)
+                                            .then(() => this.props.history.push("/owners"))}
                             className="card-link">Delete</a>
                     </div>
                 </div>

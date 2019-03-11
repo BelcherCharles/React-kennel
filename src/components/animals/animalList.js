@@ -56,7 +56,7 @@
 // }
 
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./animal.css";
 
 export default class AnimalList extends Component {
@@ -104,6 +104,8 @@ export default class AnimalList extends Component {
                   <p>{animal.name}</p>
                   <p>{animal.species.name}</p>
                   {/* <p>Owner: {animal.owners.name}</p> */}
+
+                  <Link className="nav-link" to={`/animals/${animal.id}`}>Details</Link>
 
                   <button
                     className="btn btn-danger"

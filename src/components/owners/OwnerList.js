@@ -1,21 +1,5 @@
-// import React, {Component} from 'react'
-
-// class OwnerList extends Component {
-//     render() {
-//         return (
-//             <article>
-//                 <h1>Owner List</h1>
-//                 {this.props.owners.map((singleOwner) => {
-//                     return <p key={singleOwner.id}>{singleOwner.name} {singleOwner.phone}</p>
-//                 })}
-//             </article>
-//         );
-//     }
-// }
-
-// export default OwnerList
-
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 import removeOwner from "./removeOwner.png"
 import "./owners.css"
 
@@ -30,6 +14,9 @@ export default class OwnerList extends Component {
                             <h5 className="card-title">
                                 <img src={removeOwner} className="icon--Owners" />
                                 {owner.name}
+
+                                <Link className="nav-link" to={`/owners/${owner.id}`}>Details</Link>
+
                                 <a href="#"
                                     onClick={() => this.props.removeOwner(owner.id)}
                                     className="card-link">Remove Owner</a>

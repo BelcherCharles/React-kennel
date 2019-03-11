@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import fired from "./fired-image.png"
+import { Link } from "react-router-dom";
 import "./employees.css"
 
 export default class EmployeeList extends Component {
@@ -13,6 +14,9 @@ export default class EmployeeList extends Component {
                             <h5 className="card-title">
                                 <img src={fired} className="icon--employees" />
                                 {employees.name}
+
+                                <Link className="nav-link" to={`/employees/${employees.id}`}>Details</Link>
+
                                 <a href="#"
                                     onClick={() => this.props.fireEmployee(employees.id)}
                                     className="card-link">Delete</a>
