@@ -76,8 +76,19 @@ export default class AnimalList extends Component {
 
 
   render() {
-    const animalsToRender = this.state.animalsToRender.length > 0 ? this.state.animalsToRender : this.props.animals;
-    return (
+      const animalsToRender = this.state.animalsToRender.length > 0 ? this.state.animalsToRender : this.props.animals;
+      return (
+      <React.Fragment>
+        <div className="animalButton">
+        <button type="button"
+          className="btn btn-success"
+          onClick={() => {
+            this.props.history.push("/animals/new")
+          }
+          }>
+          Admit Animal
+                    </button>
+      </div>
       <section>
         <select onChange={this.filterAnimals}>
 
@@ -120,6 +131,7 @@ export default class AnimalList extends Component {
           ))}
         </section>
       </section>
+    </React.Fragment>
     );
   }
 }

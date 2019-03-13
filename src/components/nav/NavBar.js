@@ -9,7 +9,10 @@ class NavBar extends Component {
             <nav className="navbar navbar-light fixed-top light-blue flex-md-nowrap p-0 shadow">
                 <ul className="nav nav-pills">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/">Locations</Link>
+                        <Link className="nav-link" to="/">Login</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/locations">Locations</Link>
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to="/animals">Animals</Link>
@@ -21,7 +24,7 @@ class NavBar extends Component {
                         <Link className="nav-link" to="/employees">Employees</Link>
                     </li>
                     <form className="nav-item">
-                    <input type="text" value={this.props.searchString} ref="searchStringInput" onChange={this.handleChange} />
+                        <input type="text" value={this.props.searchString} ref="searchStringInput" onChange={this.handleChange} />
                     </form>
                 </ul>
             </nav>

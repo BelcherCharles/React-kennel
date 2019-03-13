@@ -11,6 +11,11 @@
     {
       "id": 4,
       "name": "Blaise Roberts"
+    },
+    {
+      "name": "New Guy",
+      "department": "Kennel Swab",
+      "id": 6
     }
   ],
   "animals": [
@@ -88,6 +93,12 @@
     {
       "id": 7,
       "name": "Josh"
+    },
+    {
+      "name": "Charles Belcher",
+      "address": "68 Heatherwood Dr.",
+      "phone": "(304) 932-2120",
+      "id": 8
     }
   ],
   "locations": [
