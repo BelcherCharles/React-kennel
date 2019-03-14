@@ -56,6 +56,7 @@ export default class AnimalForm extends Component {
               onChange={this.handleFieldChange}
               id="animalName"
               placeholder="Animal name"
+              size="30"
             />
           </div>
           <div className="form-group">
@@ -67,6 +68,7 @@ export default class AnimalForm extends Component {
               onChange={this.handleFieldChange}
               id="breed"
               placeholder="Breed"
+              size="30"
             />
           </div>
           <div className="form-group">

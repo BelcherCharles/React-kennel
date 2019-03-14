@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import fired from "./fired-image.png"
+import employee from "./employee.png"
 import { Link } from "react-router-dom";
+import AnimalCard from '../animals/animalCard'
+import EmployeeCard from './employeeCard'
 import "./employees.css"
 
 export default class EmployeeList extends Component {
@@ -19,21 +21,32 @@ export default class EmployeeList extends Component {
                 </div>
                 <section className="employees">
                     {
-                        this.props.employees.map(employees =>
-                            <div key={employees.id} className="card">
-                                <div className="card-body">
-                                    <h5 className="card-title">
-                                        <img src={fired} className="icon--employees" />
-                                        {employees.name}
+                        this.props.employees.map(employee =>
+                            // console.log(employee)
+                            < EmployeeCard key={employee.id} employee={employee} {...this.props} />
+                            // <div key={employees.id} className="card">
+                            //     <div className="card-body">
+                            //         <h3 className="card-title">
+                            //             <img src={employee} className="icon--employees" />
+                            //             <p>{employees.name}</p>
 
-                                        <Link className="nav-link" to={`/employees/${employees.id}`}>Details</Link>
 
-                                        <a href="#"
-                                            onClick={() => this.props.fireEmployee(employees.id)}
-                                            className="card-link">Delete</a>
-                                    </h5>
-                                </div>
-                            </div>
+                            //             <Link className="nav-link" to={`/employees/${employees.id}`}>Details</Link>
+
+                            //             <a href="#"
+                            //                 onClick={() => this.props.fireEmployee(employees.id)}
+                            //                 className="card-link">Delete</a>
+                            //         </h3>
+                            //         <p className="card-subtitle mb-2 text-muted">Caretaker For</p>
+                            //             <div className="animals--caretaker">
+                            //                 {
+                            //                     this.props.animals
+                            //                         .filter(anml => anml.employeeId === employees.id)
+                            //                         .map(anml => <AnimalCard key={anml.id} animal={anml} {...this.props} />)
+                            //                 }
+                            //             </div>
+                            //     </div>
+                            // </div>
                         )
                     }
                 </section>

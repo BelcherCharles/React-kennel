@@ -22,21 +22,36 @@
     {
       "id": 2,
       "name": "Jack",
+      "breed": "Guinea Pig",
+      "employeeId": 6,
       "speciesId": 5
     },
     {
-      "id": 3,
+      "id": 1,
       "name": "Angus",
+      "breed": "Palomino",
+      "employeeId": 4,
       "speciesId": 3
+    },
+    {
+      "id": 3,
+      "name": "Polly",
+      "breed": "Parrot",
+      "employeeId": 1,
+      "speciesId": 4
     },
     {
       "id": 4,
       "name": "Henley",
+      "breed": "Rabbit",
+      "employeeId": 3,
       "speciesId": 6
     },
     {
       "id": 7,
       "name": "Harley",
+      "breed": "Black Lab",
+      "employeeId": 3,
       "speciesId": 1
     },
     {
@@ -52,11 +67,15 @@
     {
       "id": 10,
       "name": "Rudy",
+      "breed": "Grey Tabby",
+      "employeeId": 4,
       "speciesId": 2
     },
     {
       "id": 11,
       "name": "Patches",
+      "breed": "Calico",
+      "employeeId": 4,
       "speciesId": 2
     },
     {
@@ -118,16 +137,6 @@
       "id": 2,
       "animalId": 2,
       "ownerId": 2
-    },
-    {
-      "id": 3,
-      "animalId": 3,
-      "ownerId": 1
-    },
-    {
-      "id": 4,
-      "animalId": 3,
-      "ownerId": 6
     }
   ],
   "species": [

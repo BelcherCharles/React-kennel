@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import './login.css'
 
 
 export default class Login extends Component {
@@ -25,42 +26,50 @@ export default class Login extends Component {
         this.setState(stateToChange)
     }
 
+    goBack() {
+        window.history.back();
+    }
 
     // Simplistic handler for login submit
     handleLogin = (e) => {
         e.preventDefault()
 
-        /*
-            For now, just store the email and password that
-            the customer enters into local storage.
-        */
-        if (this.state.rememberMe === true) {
-            localStorage.setItem(
-                "credentials",
-                JSON.stringify({
-                    email: this.state.email,
-                    password: this.state.password
-                }))
-            sessionStorage.setItem(
-                "credentials",
-                JSON.stringify({
-                    email: this.state.email,
-                    password: this.state.password
-                }))
-        } else {
-            sessionStorage.setItem(
-                "credentials",
-                JSON.stringify({
-                    email: this.state.email,
-                    password: this.state.password
-                }))
+
+            /*
+                For now, just store the email and password that
+                the customer enters into local storage.
+            */
+            if (this.state.rememberMe === true) {
+                localStorage.setItem(
+                    "credentials",
+                    JSON.stringify({
+                        email: this.state.email,
+                        password: this.state.password
+                    }))
+                sessionStorage.setItem(
+                    "credentials",
+                    JSON.stringify({
+                        email: this.state.email,
+                        password: this.state.password
+                    }))
+                this.goBack()
+            } else {
+                sessionStorage.setItem(
+                    "credentials",
+                    JSON.stringify({
+                        email: this.state.email,
+                        password: this.state.password
+                    }))
+                this.goBack()
+            }
         }
-    }
 
     render() {
         return (
+            <div>
             <form onSubmit={this.handleLogin}>
-                <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
+                <h1>Roo's MF'n Ark</h1>
+                <h2 className="h3 mb-3 font-weight-normal">Please sign in</h2>
                 <br></br>
                 <label htmlFor="inputEmail">
                     Email address
@@ -90,6 +99,16 @@ export default class Login extends Component {
                     Sign in
                 </button>
             </form>
+            <section>
+            <br></br>
+            <h2>-or-</h2>
+            <br></br>
+                <button type="register" onClick={() => this.props.history.push("/regNewUser")}
+                id="newUserReg">
+                    Register New User
+                </button>
+            </section>
+            </div>
         )
     }
 }
